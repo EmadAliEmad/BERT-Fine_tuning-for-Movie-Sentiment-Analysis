@@ -44,6 +44,7 @@ An end-to-end sentiment analysis solution built with a fine-tuned BERT model, sh
 ├── .gitignore                 # Specifies files/directories to be ignored by Git.
 └── README.md                  # Project overview and documentation.
 
+```
 
 ## ⚙️ How to Run Locally:
 
