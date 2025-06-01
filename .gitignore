@@ -1,0 +1,21 @@
+# Python virtual environment and cache
+__pycache__/
+*.pyc
+.Python
+venv/
+.venv/
+
+# Kaggle/Colab specific
+.ipynb_checkpoints/
+*.ipynb             # Ignore .ipynb files if you're only uploading .py scripts
+temp/               # Temporary files directory from Kaggle
+
+# Large files and outputs that should not be versioned on Git
+*.h5                # Ignore ALL .h5 files (like your model)
+models/             # Ignore the entire models folder (if you want to ensure no large models are pushed)
+logs/               # Ignore log files
+outputs/            # Ignore generated output files (unless you specifically want to host HTML reports directly on GitHub, which might be large)
+
+# Other common ignores
+.env                # Ignore environment variable files
+!outputs/*.html     # EXCEPTION: If you want to include specific HTML reports, uncomment this line
