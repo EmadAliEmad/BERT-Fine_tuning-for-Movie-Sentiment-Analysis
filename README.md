@@ -34,41 +34,21 @@ An end-to-end sentiment analysis solution built with a fine-tuned BERT model, sh
 ├── model.py # Defines BERT model architecture.
 ├── trainer.py # Encapsulates the model training pipeline.
 ├── requirements.txt # List of all Python dependencies for the project.
-├── outputs/ # Directory for evaluation results and interactive plots (e.g., HTML files).
-│ ├── training_history.json
-│ ├── model_config.json
-│ ├── training_history.html
-│ ├── confusion_matrix.html
-│ └── roc_curve.html
-├── images/ # (Optional) Directory to store screenshots for README.
+
+├── API Images Output Test/ Directory to store screenshots for README.
 └── .gitignore # Specifies files/directories to be ignored by Git (e.g., large models, virtual environments).
 ## ⚙️ How to Run Locally:
 
 This project's model (`best_model.h5`) was trained on Kaggle's GPU-enabled notebooks. The trained model file is **not directly included** in this GitHub repository due to its large size (approx. 440MB) and GitHub's file size limits. However, it can be downloaded directly from the Kaggle Notebook's output.
 
-**1. Download the Trained Model:**
-You can download the `best_model.h5` file from the [Kaggle Notebook Output](https://www.kaggle.com/yourusername/your-notebook-name/output) associated with this project. Look for the `models/best_model.h5` file within the Output section.
-*(REPLACE `https://www.kaggle.com/yourusername/your-notebook-name/output` with the actual URL to your Kaggle Notebook's output page where your final saved version is.)*
 
-**2. Place the Model File:**
-After downloading, create a folder named `models` in the root directory of this repository and place `best_model.h5` inside it.
-Use code with caution.
-BERT_GitHub_Repo/
-├── models/
-│ └── best_model.h5
-└── ... (other project files)
-**Prerequisites:**
-*   Python 3.11 (recommended for stable TensorFlow/Text compatibility).
-*   Git (for cloning the repository).
-*   Visual Studio Code (or any preferred IDE/text editor).
-*   **For Windows users:** Install [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) (select "Desktop development with C++" workload during installation) to avoid potential compilation errors for certain libraries.
 
 **Setup Steps:**
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/YourGitHubUsername/Production-Ready-BERT-Sentiment-Analysis.git
-    cd Production-Ready-BERT-Sentiment-Analysis
+    git clone https://github.com/EmadAliEmad//BERT-Fine_tuning-for-Movie-Sentiment-Analysis.git
+    cd BERT-Fine_tuning-for-Movie-Sentiment-Analysis
     ```
 
 2.  **Create and activate a Python virtual environment:**
@@ -105,25 +85,21 @@ You will see the interactive Swagger UI where you can test the endpoints.
 *A view of the interactive Swagger UI for the FastAPI endpoints.*
 
 **2. Health Check Endpoint Output:**
-![API Init](API%20Images%20Output%20Test/API%20Init.png)
+![API Init](API%20Images%20Output%20Test/API%20init.png)
 *Successful health check indicating the model and tokenizer are loaded upon API startup.*
 
 **3. Prediction Endpoint Output:**
 ![API Result](API%20Images%20Output%20Test/API%20result.png)
 *Screenshot showing successful sentiment predictions for sample texts from the /predict endpoint.*
 
----
+
 
 ## 📊 Results & Performance:
 
 The model achieved strong performance on the IMDB test set (using 10,000 samples).
 *   **Accuracy:** ~0.87
 *   **ROC AUC:** ~0.94
-*(Replace with your actual evaluation metrics from your Kaggle output.)*
 
-You can view the full interactive plots (Training History, Confusion Matrix, ROC Curve) by opening the `.html` files located in the `outputs/` folder of this repository directly in your web browser.
-
-*(Optional: You can insert screenshots of your plots here for direct viewing in the README. To do this, upload the image files (e.g., to an `images/` folder in your repo) and link them like: `![Confusion Matrix](images/confusion_matrix_screenshot.png)`)*
 
 ## 🚀 Future Enhancements:
 
