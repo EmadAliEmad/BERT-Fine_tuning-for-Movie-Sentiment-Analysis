@@ -25,7 +25,7 @@ An end-to-end sentiment analysis solution built with a fine-tuned BERT model, sh
 
 ## 📂 Project Structure:
 
-```bash
+bash
 .
 ├── app.py                       # FastAPI application for inference API.
 ├── config.py                    # Centralized configuration for model, training, and project paths.
