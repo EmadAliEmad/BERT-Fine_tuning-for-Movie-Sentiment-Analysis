@@ -25,19 +25,25 @@ An end-to-end sentiment analysis solution built with a fine-tuned BERT model, sh
 
 ## 📂 Project Structure:
 
-bash
+```bash
 .
-├── app.py                       # FastAPI application for inference API.
-├── config.py                    # Centralized configuration for model, training, and project paths.
-├── data_loader.py               # Handles IMDB dataset loading, text cleaning, and data splitting.
-├── evaluator.py                 # Model evaluation suite and visualization generation.
-├── logger.py                    # Professional logging setup with Loguru and Rich.
-├── main.py                      # Main script for model training and evaluation pipeline.
-├── model.py                     # Defines BERT model architecture.
-├── trainer.py                   # Encapsulates the model training pipeline.
-├── requirements.txt             # List of all Python dependencies for the project.
-├── API Images Output Test/      # Directory to store screenshots for README.
-└── .gitignore                   # Specifies files/directories to be ignored by Git (e.g., large models, virtual environments).
+├── app.py                     # FastAPI application for inference API.
+├── config.py                  # Centralized configuration for model, training, and project paths.
+├── data_loader.py             # Handles IMDB dataset loading, text cleaning, and data splitting.
+├── evaluator.py               # Model evaluation suite and visualization generation.
+├── logger.py                  # Professional logging setup with Loguru and Rich.
+├── main.py                    # Main script for model training and evaluation pipeline.
+├── model.py                   # Defines BERT model architecture.
+├── trainer.py                 # Encapsulates the model training pipeline.
+├── requirements.txt           # List of all Python dependencies for the project.
+├── API Images Output Test/    # Directory to store screenshots for README.
+├── models/                    # Directory for trained model checkpoints (best_model.h5 - NOT versioned on GitHub due to size).
+├── outputs/                   # Directory for evaluation results, reports, and interactive plots (HTML files).
+├── logs/                      # Directory for application logs (usually not versioned on GitHub).
+├── venv_api/                  # Python virtual environment (ignored by .gitignore).
+├── .gitignore                 # Specifies files/directories to be ignored by Git.
+└── README.md                  # Project overview and documentation.
+
 
 ## ⚙️ How to Run Locally:
 
