@@ -25,6 +25,8 @@ An end-to-end sentiment analysis solution built with a fine-tuned BERT model, sh
 
 ## 📂 Project Structure:
 
+```bash
+.
 ├── app.py                       # FastAPI application for inference API.
 ├── config.py                    # Centralized configuration for model, training, and project paths.
 ├── data_loader.py               # Handles IMDB dataset loading, text cleaning, and data splitting.
@@ -36,7 +38,6 @@ An end-to-end sentiment analysis solution built with a fine-tuned BERT model, sh
 ├── requirements.txt             # List of all Python dependencies for the project.
 ├── API Images Output Test/      # Directory to store screenshots for README.
 └── .gitignore                   # Specifies files/directories to be ignored by Git (e.g., large models, virtual environments).
-
 
 ## ⚙️ How to Run Locally:
 
