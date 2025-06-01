@@ -96,17 +96,23 @@ BERT_GitHub_Repo/
 
 ## 🧪 Testing the API:
 
-Once the API is running, open your web browser and navigate to:
-`http://127.0.0.1:8000/docs`
+Once the API is running, open your web browser and navigate to: `http://127.0.0.1:8000/docs`
 
-You will see the interactive Swagger UI where you can test the endpoints:
+You will see the interactive Swagger UI where you can test the endpoints.
 
-*   **GET /health:**
-    *   Click `Try it out` and `Execute` to check if the API is running and the model is loaded (`"model_loaded": true`).
-*   **POST /predict:**
-    *   Click `Try it out`.
-    *   Modify the `Request body` with your desired texts (e.g., `{"texts": ["This is a great movie!", "I hate this product."]}`).
-    *   Click `Execute` to get sentiment predictions (e.g., `{"predictions": [{"sentiment": "Positive", "confidence": ...}, ...]}`).
+**1. API Interface (Swagger UI):**
+![API Interface](API%20Images%20Output%20Test/API%20Interface.png)
+*A view of the interactive Swagger UI for the FastAPI endpoints.*
+
+**2. Health Check Endpoint Output:**
+![API Init](API%20Images%20Output%20Test/API%20Init.png)
+*Successful health check indicating the model and tokenizer are loaded upon API startup.*
+
+**3. Prediction Endpoint Output:**
+![API Result](API%20Images%20Output%20Test/API%20result.png)
+*Screenshot showing successful sentiment predictions for sample texts from the /predict endpoint.*
+
+---
 
 ## 📊 Results & Performance:
 
