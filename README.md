@@ -60,8 +60,7 @@ This project's model (`best_model.h5`) was trained on Kaggle's GPU-enabled noteb
 You can download the `best_model.h5` file directly from the Kaggle Notebook's output associated with this project.
 
 **Download Link:**
-[Click here to download the trained `best_model.h5` from Kaggle Notebook Output](**YOUR_KAGGLE_NOTEBOOK_VERSION_OUTPUT_URL_HERE**)
-*(REPLACE `YOUR_KAGGLE_NOTEBOOK_VERSION_OUTPUT_URL_HERE` with the actual URL to your Kaggle Notebook's specific COMPLETED version's output page where your final saved model is located. This URL usually looks like: `https://www.kaggle.com/code/yourusername/your-notebook-name/output?scriptVersionId=XXXXXXXXXX`)*
+[Click here to download the trained `best_model.h5` from Kaggle Notebook Output](*https://www.kaggle.com/code/emad3li/bert-fine-tuning-for-movie-sentiment-analysis**)
 
 After downloading, create a folder named `models` in the root directory of this repository and place `best_model.h5` inside it.
 
@@ -136,7 +135,6 @@ You will see the interactive Swagger UI where you can test the endpoints.
 The model achieved strong performance on the IMDB test set (using 10,000 samples).
 *   **Accuracy:** ~0.87
 *   **ROC AUC:** ~0.94
-*(Replace with your actual evaluation metrics from your Kaggle output, if different.)*
 
 You can view the full interactive plots (Training History, Confusion Matrix, ROC Curve) by opening the `.html` files located in the `outputs/` folder of this repository directly in your web browser.
 
@@ -155,7 +153,7 @@ You can view the full interactive plots (Training History, Confusion Matrix, ROC
 ## 📞 Contact:
 
 *   **Your Name:** Emad Ali Emad
-*   **LinkedIn:** [[Your LinkedIn Profile URL](https://www.linkedin.com/in/emad-ali-emad-886647199/)]
+*   **LinkedIn:** [(https://www.linkedin.com/in/emad-ali-emad-886647199/)]
 *   **Email:** [emadaliemad375@gmail.com]
 
 ---
