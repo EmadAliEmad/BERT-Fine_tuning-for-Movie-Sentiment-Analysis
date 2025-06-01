@@ -24,19 +24,20 @@ An end-to-end sentiment analysis solution built with a fine-tuned BERT model, sh
 *   **Version Control:** `Git`, `GitHub`
 
 ## 📂 Project Structure:
-.
-├── app.py # FastAPI application for inference API.
-├── config.py # Centralized configuration management for model, training, and project paths.
-├── data_loader.py # Handles IMDB dataset loading, text cleaning, and data splitting.
-├── evaluator.py # Model evaluation suite and visualization generation.
-├── logger.py # Professional logging setup with Loguru and Rich.
-├── main.py # Main script for model training and evaluation pipeline.
-├── model.py # Defines BERT model architecture.
-├── trainer.py # Encapsulates the model training pipeline.
-├── requirements.txt # List of all Python dependencies for the project.
 
-├── API Images Output Test/ Directory to store screenshots for README.
-└── .gitignore # Specifies files/directories to be ignored by Git (e.g., large models, virtual environments).
+├── app.py                       # FastAPI application for inference API.
+├── config.py                    # Centralized configuration for model, training, and project paths.
+├── data_loader.py               # Handles IMDB dataset loading, text cleaning, and data splitting.
+├── evaluator.py                 # Model evaluation suite and visualization generation.
+├── logger.py                    # Professional logging setup with Loguru and Rich.
+├── main.py                      # Main script for model training and evaluation pipeline.
+├── model.py                     # Defines BERT model architecture.
+├── trainer.py                   # Encapsulates the model training pipeline.
+├── requirements.txt             # List of all Python dependencies for the project.
+├── API Images Output Test/      # Directory to store screenshots for README.
+└── .gitignore                   # Specifies files/directories to be ignored by Git (e.g., large models, virtual environments).
+
+
 ## ⚙️ How to Run Locally:
 
 This project's model (`best_model.h5`) was trained on Kaggle's GPU-enabled notebooks. The trained model file is **not directly included** in this GitHub repository due to its large size (approx. 440MB) and GitHub's file size limits. However, it can be downloaded directly from the Kaggle Notebook's output.
