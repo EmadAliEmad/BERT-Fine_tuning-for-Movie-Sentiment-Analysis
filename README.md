@@ -2,6 +2,8 @@
 
 An end-to-end sentiment analysis solution built with a fine-tuned BERT model, showcasing a robust training pipeline and a high-performance FastAPI for real-time inference. This project demonstrates practical application of Natural Language Processing (NLP), Deep Learning, and MLOps principles.
 
+---
+
 ## ✨ Key Features:
 
 *   **End-to-End Pipeline:** Covers data loading, cleaning, preprocessing, model training, evaluation, and API deployment.
@@ -10,7 +12,9 @@ An end-to-end sentiment analysis solution built with a fine-tuned BERT model, sh
 *   **Professional Training:** Implements advanced Keras callbacks (ModelCheckpoint, EarlyStopping, ReduceLROnPlateau, TensorBoard) for efficient and stable model training.
 *   **Comprehensive Evaluation:** Provides detailed performance metrics (Accuracy, Precision, Recall, F1-Score, ROC AUC) and generates interactive visualizations (Training History, Confusion Matrix, ROC Curve).
 *   **Real-time Inference API:** Deployed using FastAPI and Uvicorn, enabling sentiment predictions via HTTP requests.
-*   **Robust Error Handling:** Demonstrates strong problem-solving capabilities by addressing common environmental and library compatibility challenges.
+*   **Robust Error Handling:** Demonstrates strong problem-solving capabilities by addressing common environmental and library compatibility challenges throughout the development process.
+
+---
 
 ## 📚 Technologies Used:
 
@@ -22,6 +26,8 @@ An end-to-end sentiment analysis solution built with a fine-tuned BERT model, sh
 *   **Logging & Visualization:** `Loguru`, `Rich`, `Plotly`, `Matplotlib`, `Seaborn`
 *   **Environment Management:** `Python venv`
 *   **Version Control:** `Git`, `GitHub`
+
+---
 
 ## 📂 Project Structure:
 
@@ -36,31 +42,51 @@ An end-to-end sentiment analysis solution built with a fine-tuned BERT model, sh
 ├── model.py                   # Defines BERT model architecture.
 ├── trainer.py                 # Encapsulates the model training pipeline.
 ├── requirements.txt           # List of all Python dependencies for the project.
-├── API Images Output Test/    # Directory to store screenshots for README.
+├── API Images Output Test/    # Directory to store screenshots for README.md display.
 ├── models/                    # Directory for trained model checkpoints (best_model.h5 - NOT versioned on GitHub due to size).
 ├── outputs/                   # Directory for evaluation results, reports, and interactive plots (HTML files).
 ├── logs/                      # Directory for application logs (usually not versioned on GitHub).
 ├── venv_api/                  # Python virtual environment (ignored by .gitignore).
-├── .gitignore                 # Specifies files/directories to be ignored by Git.
+├── .gitignore                 # Specifies files/directories to be ignored by Git (e.g., large models, virtual environments).
 └── README.md                  # Project overview and documentation.
-
 ```
+
+---
+
+## ⬇️ How to Download the Trained Model:
+
+This project's model (`best_model.h5`) was trained on Kaggle's GPU-enabled notebooks. The trained model file is **not directly included** in this GitHub repository due to its large size (approx. 440MB) and GitHub's file size limits.
+
+You can download the `best_model.h5` file directly from the Kaggle Notebook's output associated with this project.
+
+**Download Link:**
+[Click here to download the trained `best_model.h5` from Kaggle Notebook Output](**YOUR_KAGGLE_NOTEBOOK_VERSION_OUTPUT_URL_HERE**)
+*(REPLACE `YOUR_KAGGLE_NOTEBOOK_VERSION_OUTPUT_URL_HERE` with the actual URL to your Kaggle Notebook's specific COMPLETED version's output page where your final saved model is located. This URL usually looks like: `https://www.kaggle.com/code/yourusername/your-notebook-name/output?scriptVersionId=XXXXXXXXXX`)*
+
+After downloading, create a folder named `models` in the root directory of this repository and place `best_model.h5` inside it.
+
+---
 
 ## ⚙️ How to Run Locally:
 
-This project's model (`best_model.h5`) was trained on Kaggle's GPU-enabled notebooks. The trained model file is **not directly included** in this GitHub repository due to its large size (approx. 440MB) and GitHub's file size limits. However, it can be downloaded directly from the Kaggle Notebook's output.
-
-
+**Prerequisites:**
+*   Python 3.11 (recommended for stable TensorFlow/Text compatibility).
+*   Git (for cloning the repository).
+*   Visual Studio Code (or any preferred IDE/text editor).
+*   **For Windows users:** Install [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) (select "Desktop development with C++" workload during installation) to avoid potential compilation errors for certain libraries.
 
 **Setup Steps:**
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/EmadAliEmad//BERT-Fine_tuning-for-Movie-Sentiment-Analysis.git
+    git clone https://github.com/EmadAliEmad/BERT-Fine_tuning-for-Movie-Sentiment-Analysis.git
     cd BERT-Fine_tuning-for-Movie-Sentiment-Analysis
     ```
 
-2.  **Create and activate a Python virtual environment:**
+2.  **Download the Trained Model:**
+    Follow the instructions in the "⬇️ How to Download the Trained Model" section above to get `best_model.h5` and place it in the `models/` directory.
+
+3.  **Create and activate a Python virtual environment:**
     ```bash
     # Using Python 3.11 directly (if installed as 'python3.11' or 'py -3.11')
     py -3.11 -m venv venv_api 
@@ -71,17 +97,19 @@ This project's model (`best_model.h5`) was trained on Kaggle's GPU-enabled noteb
     source venv_api/bin/activate  # On macOS/Linux/Git Bash
     ```
 
-3.  **Install the required dependencies:**
+4.  **Install the required dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
-    *   *(Ignore any `WARNING` messages about dependency conflicts unless they are `ERROR` preventing installation.)*
+    *(Ignore any `WARNING` messages about dependency conflicts unless they are `ERROR` preventing installation.)*
 
-4.  **Run the FastAPI application locally:**
+5.  **Run the FastAPI application locally:**
     ```bash
     uvicorn app:app --reload --host 0.0.0.0 --port 8000
     ```
     The API will now be running on `http://127.0.0.1:8000`. Keep this terminal open.
+
+---
 
 ## 🧪 Testing the API:
 
@@ -101,14 +129,18 @@ You will see the interactive Swagger UI where you can test the endpoints.
 ![API Result](API%20Images%20Output%20Test/API%20result.png)
 *Screenshot showing successful sentiment predictions for sample texts from the /predict endpoint.*
 
-
+---
 
 ## 📊 Results & Performance:
 
 The model achieved strong performance on the IMDB test set (using 10,000 samples).
 *   **Accuracy:** ~0.87
 *   **ROC AUC:** ~0.94
+*(Replace with your actual evaluation metrics from your Kaggle output, if different.)*
 
+You can view the full interactive plots (Training History, Confusion Matrix, ROC Curve) by opening the `.html` files located in the `outputs/` folder of this repository directly in your web browser.
+
+---
 
 ## 🚀 Future Enhancements:
 
@@ -118,4 +150,13 @@ The model achieved strong performance on the IMDB test set (using 10,000 samples
 *   Containerize the application using Docker for easier deployment.
 *   Deploy the API to a cloud platform (e.g., Hugging Face Spaces, AWS Lambda, Google Cloud Run).
 
+---
 
+## 📞 Contact:
+
+*   **Your Name:** Emad Ali Emad
+*   **LinkedIn:** [[Your LinkedIn Profile URL](https://www.linkedin.com/in/emad-ali-emad-886647199/)]
+*   **Email:** [emadaliemad375@gmail.com]
+
+---
+```
